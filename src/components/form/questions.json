@@ -1,0 +1,59 @@
+[
+    {
+        "category": "Algemeen",
+        "questions": [
+            {
+                "question": "Wat is het geslacht van het kind?",
+                "answer": [
+                    {
+                        "option": "man",
+                        "value": 0.1
+                    }, 
+                    {
+                        "option": "vrouw",
+                        "value": 0.05
+                    }
+                ]
+            },
+            {
+                "question": "Wat is de leeftijd van het kind",
+                "answer": [
+                    {
+                        "option": "0 tot 4 jaar",
+                        "value": 0.1
+                    },
+                    {
+                        "option": "5 tot 8 jaar",
+                        "value": 0.2
+                    },
+                    {
+                        "option": "9 tot 12 jaar",
+                        "value": 0.5
+                    },
+                    {
+                        "option": "13 tot 18 jaar",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Werk & Opleiding",
+        "questions": [
+            {
+                "question": "Zit het kind nog op school?",
+                "answer": [
+                    {
+                        "option": "yes",
+                        "value": -0.234
+                    },
+                    {
+                        "option": "no",
+                        "value": 1.23
+                    }
+                ]
+            }
+        ]
+    }
+]

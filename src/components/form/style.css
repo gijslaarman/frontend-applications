@@ -1,0 +1,45 @@
+form {
+    padding: 25px;
+}
+
+    form label, form input {
+        display: block;
+    }
+
+    form label {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 0;
+    }
+
+    form input[type=text] {
+        font-size: 18px;
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    form select {
+        display: block;
+        width: 30%;
+        padding: 15px;
+    }
+
+        form select option {
+            font-size: 20px;
+            padding: 15px;
+        }
+
+.form {
+    max-width: 500px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    margin: 50px 50px;
+}
+
+    .form fieldset {
+
+    }
