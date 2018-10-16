@@ -8,6 +8,8 @@ import Home from '../routes/home';
 import Profile from '../routes/profile';
 import TestGijs from '../routes/testgijs';
 
+document.documentElement.lang = "nl";
+
 export default class App extends Component {
 	
 	/** Gets fired when the route changes.

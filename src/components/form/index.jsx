@@ -16,32 +16,55 @@ class Form extends Component {
                 let input = [];
                 let answers = [];
 
-                inputs.answer.forEach( (answer) => {
-                    answers.push(
-                        <option value={answer.value}>{ answer.option }</option>
-                    )
-                } )
+                if (inputs.answer.length <= 3) {
+                    inputs.answer.forEach( (answer) => {
+                        answers.push(
+                            <input id={inputs.name + answer.value} name={inputs.name} type="radio" value={answer.value}></input>
+                        )
+                        
+                        answers.push(
+                            <label htmlFor={inputs.name + answer.value}>{ answer.option }</label>
+                        )
+                    } )
 
-                input.push(
-                    <select>
-                        {answers}
-                    </select>
-                )
+                    input.push(
+                        <div className={style.radioContainer}>
+                            {answers}
+                        </div>
+                    )
+                } else {
+                    inputs.answer.forEach( (answer) => {
+                        answers.push(
+                            <option value={answer.value}>{ answer.option }</option>
+                        )
+                    } )
+
+                    input.push(
+                        <select>
+                            <option>-</option>
+                            {answers}
+                        </select>
+                    )
+                }
 
                 labels.push(
                     // Create labels, first the question is rendered and then the select.
-                    <label>
-                        { inputs.question }
+                    <div className={style.question}>
+                        <p>
+                            { inputs.question }
+                        </p>
                         { input }
-                    </label>
+                    </div>
                 )
             } )
 
             forms.push(
                 <form className={style.form}>
-                    <h3>{category.category}</h3>
                     <fieldset>
-                        { labels }
+                        <legend>{category.category}</legend>
+                        <div className={style.questionsContainer}>
+                            { labels }
+                        </div>
                     </fieldset>
                 </form>
             )

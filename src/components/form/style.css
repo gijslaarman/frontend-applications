@@ -1,17 +1,96 @@
 form {
     padding: 25px;
+    background-color: #FFF;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    margin: 50px 50px;
+    max-width: 600px;
 }
 
-    form label, form input {
-        display: block;
+    form fieldset {
+        border: 0;
+    }
+
+        form fieldset legend {
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+        }.form fieldset legend:after {
+            position: absolute;
+            right: 0;
+            content: "v";
+        }
+
+        form fieldset .questionsContainer {
+            /* height: 0;
+            overflow: hidden; */
+        }
+    
+    form .question {
+        margin: 20px 0;
+    }
+
+        .question p {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+    form label, form select {
+        font-size: 16px;
+        font-weight: bold;
+        min-height: 60px;
+        background-color: rgba(0,25,68,0.7);
+        color: white;
+    }
+
+    form select {
+        appearance: none;
+        width: 100%;
+        padding: 10px 25px;
+        border-radius: 10px;
     }
 
     form label {
-        font-size: 18px;
-        font-weight: bold;
         padding: 10px 0;
+        flex: 1;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 0.5px solid rgba(255,255,255,0.2);
+    }form label:first-of-type {
+        border-radius: 10px 0 0 10px;
+        padding-left: 20px;
+    }form label:last-of-type {
+        border-radius: 0 10px 10px 0;
+        padding-right: 20px;
+    }
+    
+    .radioContainer {
+        display: flex;
+        justify-content: space-evenly;
     }
 
+    /* form input {
+        display: block;
+    } */
+
+        
+        .radioContainer input:checked + label{
+            background-color: #001944;
+        }
+
+        .radioContainer input {
+            display: none;
+        }
+
+            
+    
+ 
     form input[type=text] {
         font-size: 18px;
         width: 100%;
@@ -20,33 +99,7 @@ form {
         padding: 10px;
     }
 
-    form select {
-        display: block;
-        width: 30%;
-        padding: 15px;
-    }
-
         form select option {
             font-size: 20px;
             padding: 15px;
         }
-
-.form {
-    max-width: 500px;
-    background-color: #FFF;
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
-    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
-    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
-    border-radius: 10px;
-    margin: 50px 50px;
-}
-
-    .form h3::after {
-        content: "v";
-        padding-left: 15px;
-        text-align: right;
-    }
-
-    .form fieldset {
-
-    }

@@ -3,6 +3,7 @@
         "category": "Algemeen",
         "questions": [
             {
+                "name": "gender",
                 "question": "Wat is het geslacht van het kind?",
                 "answer": [
                     {
@@ -16,6 +17,7 @@
                 ]
             },
             {
+                "name": "ageKid",
                 "question": "Wat is de leeftijd van het kind",
                 "answer": [
                     {
@@ -36,7 +38,8 @@
                     }
                 ]
             },
-            {
+            {   
+                "name": "ageMom",
                 "question": "Leeftijd moeder bij geboorte",
                 "answer": [
                     {
@@ -61,7 +64,8 @@
                     }
                 ]
             },
-            {
+            {   
+                "name": "ageDad",
                 "question": "leeftijd vader bij geboorte",
                 "answer": [
                     {
@@ -87,6 +91,7 @@
                 ]
             },
             {
+                "name": "AgeDiff",
                 "question": "Leeftijd verschil tussen ouders",
                 "answer": [
                     {
@@ -100,6 +105,7 @@
                 ]
             },
             {
+                "name": "parentsHeritage",
                 "question": "Herkomst ouders",
                 "answer": [
                     {
@@ -117,6 +123,7 @@
                 ]
             },
             {
+                "name": "helpKid",
                 "question": "Traject vooraf",
                 "answer": [
                     {
@@ -135,6 +142,7 @@
         "category": "Werk & Opleiding",
         "questions": [
             {
+                "name": "schoolKid",
                 "question": "Zit het kind nog op school?",
                 "answer": [
                     {
