@@ -7,11 +7,11 @@
                 "answer": [
                     {
                         "option": "man",
-                        "value": 0.1
+                        "value": -0.12611
                     }, 
                     {
                         "option": "vrouw",
-                        "value": 0.05
+                        "value": 0
                     }
                 ]
             },
@@ -20,19 +20,112 @@
                 "answer": [
                     {
                         "option": "0 tot 4 jaar",
-                        "value": 0.1
+                        "value": 0
                     },
                     {
                         "option": "5 tot 8 jaar",
-                        "value": 0.2
+                        "value": 0
                     },
                     {
                         "option": "9 tot 12 jaar",
-                        "value": 0.5
+                        "value": 0
                     },
                     {
                         "option": "13 tot 18 jaar",
-                        "value": 1.0
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "question": "Leeftijd moeder bij geboorte",
+                "answer": [
+                    {
+                        "option": "jonger dan 25 jaar",
+                        "value": 0.45150
+                    },
+                    {
+                        "option": "25 tot 30 jaar",
+                        "value": 0.10852
+                    },
+                    {
+                        "option": "30 tot 35 jaar",
+                        "value": -0.08841
+                    },
+                    {
+                        "option": "35 tot 40 jaar",
+                        "value": 0.23988
+                    },
+                    {
+                        "option": "40 jaar of ouder",
+                        "value": -0.11153
+                    }
+                ]
+            },
+            {
+                "question": "leeftijd vader bij geboorte",
+                "answer": [
+                    {
+                        "option": "jonger dan 25 jaar",
+                        "value": -0.00587
+                    },
+                    {
+                        "option": "25 tot 30 jaar",
+                        "value": 0.03107
+                    },
+                    {
+                        "option": "30 tot 35 jaar",
+                        "value": -0.21624
+                    },
+                    {
+                        "option": "35 tot 40 jaar",
+                        "value": -0.21624
+                    },
+                    {
+                        "option": "40 jaar of ouder",
+                        "value": -0.32645
+                    }
+                ]
+            },
+            {
+                "question": "Leeftijd verschil tussen ouders",
+                "answer": [
+                    {
+                        "option": "Minder dan 5 jaar",
+                        "value": 0
+                    },
+                    {
+                        "option": "Meer dan 5 jaar",
+                        "value": 0.28581
+                    }
+                ]
+            },
+            {
+                "question": "Herkomst ouders",
+                "answer": [
+                    {
+                        "option": "Beide ouders Nederlands",
+                        "value": 0
+                    },
+                    {
+                        "option": "Beide ouders niet Nederlands",
+                        "value": 0.16972
+                    },
+                    {
+                        "option": "Een van de ouders Nederlands en de ander niet Nederlands",
+                        "value": -0.08943
+                    }
+                ]
+            },
+            {
+                "question": "Traject vooraf",
+                "answer": [
+                    {
+                        "option": "Geen jeugdhulp zonder verblijf gehad",
+                        "value": 0
+                    },
+                    {
+                        "option": "Jeugdhulp zonder verblijf gehad",
+                        "value": 1.52774
                     }
                 ]
             }

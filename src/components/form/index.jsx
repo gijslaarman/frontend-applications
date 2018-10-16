@@ -2,8 +2,6 @@ import { h, Component } from 'preact';
 import style from './style';
 import categories from './questions';
 
-
-console.log(categories);
 class Form extends Component {
 
     createForms() {
@@ -31,7 +29,7 @@ class Form extends Component {
                 )
 
                 labels.push(
-                    // Create labels, first the question is rendered and then the fitting input/select.
+                    // Create labels, first the question is rendered and then the select.
                     <label>
                         { inputs.question }
                         { input }
