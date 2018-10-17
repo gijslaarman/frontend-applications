@@ -9,3 +9,18 @@
 	.form {
 		width: 50%;
 	}
+
+	.riskContainer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start
+	}
+
+		.riskContainer div:first-child {
+			flex-grow: 1;
+			flex-basis: 0;
+		}.riskContainer div:last-child {
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+

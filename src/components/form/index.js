@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import style from './style';
-import categories from './questions';
+import categories from '../../assets/questions';
 
 class Form extends Component {
     constructor(props) {
@@ -10,21 +10,31 @@ class Form extends Component {
     }
 
     saveValue(e, event) {
+        // Get the "name" of the current question, if its a <select> it will find the id, but for inputs I needed variating id's so I used the questions "name" as name attribute.
         const element = event.target.tagName;
         let targetId;
-        let value;
-        let obj = {};
         
         if (element === 'SELECT') {
             targetId = event.target.getAttribute('id');
         } else if (element === 'INPUT') {
             targetId = event.target.getAttribute('name');
         }
-        
-        value = event.target.value;
+
+        // Get the value of the current selected option.
+        let value = event.target.value;
+
+        // Create object to insert into the components state.
+        let obj = {};
         obj[targetId] = value;
         this.setState(obj);
-        console.log(this.state);
+
+        // !! Use in other component that is supposed to show the outcome of the formula !!
+        let total = Object.values(this.state).map(Number).reduce( (sum, num) => {
+            return sum + Number(num);
+        }, 0 ) // Titus heeft deze code geminified naar iets veel praktischer, ipv een array loopen en een nieuwe array aanmaken.
+
+        this.props.formData(total);
+        console.log(total)
     }
 
     createForms() {
@@ -99,7 +109,7 @@ class Form extends Component {
 
     render() {
         return (
-            <div>
+            <div class={style.formContainer}>
                 {this.createForms()}
             </div>
         )

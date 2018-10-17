@@ -1,11 +1,13 @@
+.formContainer {
+    margin: 25px;
+}
+
 form {
     background-color: #FFF;
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     border-radius: 10px;
-    max-width: 600px;
-    margin: 20px 0;
 }
 
     form fieldset {

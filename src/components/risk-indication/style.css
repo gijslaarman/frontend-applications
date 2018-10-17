@@ -1,0 +1,10 @@
+.showRisk {
+    background-color: white;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+    .showRisk h2 {
+        padding: 25px;
+        margin: 0;
+    }
