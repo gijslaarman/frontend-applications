@@ -3,13 +3,19 @@ import style from './style';
 import Form from '../../components/form';
 
 class Home extends Component {
+	getValues(state) {
+		state = {};
+
+	}
+
 	render() {
 		return (
 			<div class={style.home}>
 				<h2>De korte vragenlijst</h2>
 				<p>De korte vragenlijst is er voor alle hulpverleners om snel een inzicht te krijgen of een kind hulp nodig heeft, wat de belangrijkste risico factoren zijn en een tijdsbestek aan een opdracht te geven.</p>
 
-				<Form />
+
+				<Form style={style.form} />
 			</div>
 		)
 	}	

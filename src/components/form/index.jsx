@@ -3,6 +3,29 @@ import style from './style';
 import categories from './questions';
 
 class Form extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { };
+        this.saveValue.bind(this);
+    }
+
+    saveValue(e, event) {
+        const element = event.target.tagName;
+        let targetId;
+        let value;
+        let obj = {};
+        
+        if (element === 'SELECT') {
+            targetId = event.target.getAttribute('id');
+        } else if (element === 'INPUT') {
+            targetId = event.target.getAttribute('name');
+        }
+        
+        value = event.target.value;
+        obj[targetId] = value;
+        this.setState(obj);
+        console.log(this.state);
+    }
 
     createForms() {
         let forms = [];
@@ -19,7 +42,7 @@ class Form extends Component {
                 if (inputs.answer.length <= 3) {
                     inputs.answer.forEach( (answer) => {
                         answers.push(
-                            <input id={inputs.name + answer.value} name={inputs.name} type="radio" value={answer.value}></input>
+                            <input onChange={this.saveValue.bind(this, event)} id={inputs.name + answer.value} name={inputs.name} type="radio" value={answer.value}></input>
                         )
                         
                         answers.push(
@@ -40,8 +63,8 @@ class Form extends Component {
                     } )
 
                     input.push(
-                        <select>
-                            <option>-</option>
+                        <select id={inputs.name} onChange={this.saveValue.bind(this, event)}>
+                            <option disabled selected>-</option>
                             {answers}
                         </select>
                     )

@@ -22,19 +22,19 @@
                 "answer": [
                     {
                         "option": "0 tot 4 jaar",
-                        "value": 0
+                        "value": 0.01
                     },
                     {
                         "option": "5 tot 8 jaar",
-                        "value": 0
+                        "value": 0.02
                     },
                     {
                         "option": "9 tot 12 jaar",
-                        "value": 0
+                        "value": 0.03
                     },
                     {
                         "option": "13 tot 18 jaar",
-                        "value": 0
+                        "value": 0.04
                     }
                 ]
             },

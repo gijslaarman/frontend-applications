@@ -1,16 +1,17 @@
 form {
-    padding: 25px;
     background-color: #FFF;
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     border-radius: 10px;
-    margin: 50px 50px;
     max-width: 600px;
+    margin: 20px 0;
 }
 
     form fieldset {
         border: 0;
+        padding: 0;
+        margin: 0;
     }
 
         form fieldset legend {
@@ -18,13 +19,25 @@ form {
             font-weight: bold;
             position: relative;
             width: 100%;
+            background-color: #001944;
+            padding: 25px;
+            color: white;
+            border-radius: 10px 10px 0 0;
         }.form fieldset legend:after {
             position: absolute;
-            right: 0;
-            content: "v";
+            right: 25px;
+            top: 50%;
+            transform: translate(0, -50%);
+            content: '';
+            height: 25px;
+            width: 25px;
+            background: url('../../assets/caret-down-white.svg') no-repeat center;
+        }.form fieldset legend.open:after {
+            transform: rotate(180deg);
         }
 
         form fieldset .questionsContainer {
+            padding: 10px 25px;
             /* height: 0;
             overflow: hidden; */
         }
@@ -51,6 +64,9 @@ form {
         width: 100%;
         padding: 10px 25px;
         border-radius: 10px;
+        background: url('../../assets/caret-down-white.svg') no-repeat 95% center;
+        background-size: 15px;
+        background-color: rgba(0,25,68,0.7);
     }
 
     form label {
