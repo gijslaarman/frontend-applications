@@ -6,15 +6,17 @@ import RiskIndication from '../../components/risk-indication';
 class Home extends Component {
 	constructor(props) {
 		super(props)
-		this.state = {
-			riskIndication: null
-		}
 		this.getValues.bind(this)
+		this.logState.bind(this)
+	}
+
+	logState = () => {
+		console.log(this.state);
 	}
 
 	getValues = (dataFromChild) => {
 		this.setState({
-			riskIndication: dataFromChild
+			riskValues: dataFromChild
 		})
 	}
 
@@ -26,7 +28,7 @@ class Home extends Component {
 
 				<div class={style.riskContainer}>
 					<Form formData={this.getValues} style={style.form} />
-					<RiskIndication riskIndication={this.state.riskIndication}/>
+					<RiskIndication riskValues={this.state.riskValues}/>
 				</div>
 			</div>
 		)

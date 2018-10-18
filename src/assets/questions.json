@@ -156,5 +156,25 @@
                 ]
             }
         ]
+    },
+    {
+        "category": "test",
+        "questions": [
+            {
+                "name": "testQuestion",
+                "question": "DIt is een testvraag",
+                "answer": [
+                    {
+                        "option": "test",
+                        "value": 0.23
+                    },
+                    {
+                        "option": "no",
+                        "value": -0.23
+                    }
+                ]
+            }
+        ]
     }
+
 ]

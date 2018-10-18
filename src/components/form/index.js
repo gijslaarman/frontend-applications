@@ -5,8 +5,12 @@ import categories from '../../assets/questions';
 class Form extends Component {
     constructor(props) {
         super(props);
-        this.state = { };
         this.saveValue.bind(this);
+        this.updateProps.bind(this);
+    }
+
+    updateProps() {
+        this.props.formData(this.state);
     }
 
     saveValue(e, event) {
@@ -22,19 +26,27 @@ class Form extends Component {
 
         // Get the value of the current selected option.
         let value = event.target.value;
+        let categoryName = event.target.getAttribute('category');
 
-        // Create object to insert into the components state.
-        let obj = {};
-        obj[targetId] = value;
-        this.setState(obj);
+        let valueObj = {};
+        valueObj[targetId] = value;
 
-        // !! Use in other component that is supposed to show the outcome of the formula !!
-        let total = Object.values(this.state).map(Number).reduce( (sum, num) => {
-            return sum + Number(num);
-        }, 0 ) // Titus heeft deze code geminified naar iets veel praktischer, ipv een array loopen en een nieuwe array aanmaken.
+        // Checks if the current category is already stored in the state.
+        if (this.state[categoryName]) {
+            // add value to the object with the correct key.
+            this.state[categoryName][targetId] = value;
+        } else {
+            // create new object with the category name and add the current value with correct key.
+            categoryName = {
+                [categoryName]: {
+                    [targetId]: value
+                }
+            }
 
-        this.props.formData(total);
-        console.log(total)
+            this.setState(categoryName);
+        }
+
+        this.updateProps(this.state);
     }
 
     createForms() {
@@ -43,6 +55,7 @@ class Form extends Component {
         // Loop through the categories
         categories.forEach( (category) => {
             let labels = [];
+            const categoryName = category.category.toLowerCase();
 
             // Loops through every question/answer set inside the current category.
             category.questions.forEach( (inputs) => {
@@ -52,7 +65,7 @@ class Form extends Component {
                 if (inputs.answer.length <= 3) {
                     inputs.answer.forEach( (answer) => {
                         answers.push(
-                            <input onChange={this.saveValue.bind(this, event)} id={inputs.name + answer.value} name={inputs.name} type="radio" value={answer.value}></input>
+                            <input category={categoryName} onChange={this.saveValue.bind(this, event)} id={inputs.name + answer.value} name={inputs.name} type="radio" value={answer.value}></input>
                         )
                         
                         answers.push(
@@ -73,7 +86,7 @@ class Form extends Component {
                     } )
 
                     input.push(
-                        <select id={inputs.name} onChange={this.saveValue.bind(this, event)}>
+                        <select category={categoryName} id={inputs.name} onChange={this.saveValue.bind(this, event)}>
                             <option disabled selected>-</option>
                             {answers}
                         </select>

@@ -4,26 +4,44 @@ import style from './style';
 class RiskIndication extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            general: null
-        }
-
-        this.componentDidMount.bind(this)
     }
 
-    componentDidMount() {
-        let calc =  Number( ( 1 / ( 1 + Math.exp( -1 * ( -8.57219 + this.props.riskIndication ) ) ) * 100 ).toFixed( 2 ) )
+    makeObjectArray = (array) => {
+        let ObjectArray = [];
 
-        this.setState({
-            general: calc
+        array.forEach( (obj) => {
+            ObjectArray.push(obj)
         })
+
+        return ObjectArray
     }
 
-    render() { 
+    matchCategories = (keys, values) => {
+        let array = [];
+
+        for (let i = 0; i < keys.length; i++) {
+            array.push({[keys[i]]: values[i]})
+        }
+        
+        return array
+    }
+
+    componentDidUpdate = () => {
+        let valueObjectArray = this.makeObjectArray(Object.values(this.props.riskValues));
+        let matchingArray = this.matchCategories(Object.keys(this.props.riskValues), valueObjectArray);
+
+        
+        console.log(matchingArray);
+
+        //let total = Object.values(this.props.riskValues).map(Number).reduce( (sum, num) => {
+        //    return sum + Number(num);
+        //}, 0 ) // Titus heeft deze code geminified naar iets veel praktischer, ipv een array loopen en een nieuwe array aanmaken.
+    }
+
+    render() {
         return ( 
             <div class={style.showRisk}>
-                <h2> Risico Indicatie</h2>
-                <p> {this.state.general}%</p>
+                <h2> Risico Indicatie </h2>
             </div>
          );
     }
