@@ -5,8 +5,7 @@ import Header from './header';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
-import Profile from '../routes/profile';
-import TestGijs from '../routes/testgijs';
+import Info from '../routes/info';
 
 document.documentElement.lang = "nl";
 
@@ -26,7 +25,7 @@ export default class App extends Component {
 				<Header />
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />
-					{/* <TestGijs path="/testgijs" mydate="10101001"/> */}
+					<Info path="/info" />
 				</Router>
 			</div>
 		);

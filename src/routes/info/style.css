@@ -1,0 +1,8 @@
+main {
+    padding-top: 56px;
+    display: flex;
+}
+
+    .flexChild {
+        flex: 1;
+    }
