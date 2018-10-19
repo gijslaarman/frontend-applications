@@ -101,13 +101,13 @@ A little bit of info about the app.
 ## Todo
 There was still a lot I wanted to implement in this app, due to time restricitions I was not able to implement them. Here's a list of what I wanted to achieve with this app:
 
-[x] Render forms through JSON
-[x] Make the forms dynamic so that no matter the names of the form, it would always render perfectly.
-[x] Render the risk indication percentage, and show what category weighs the heaviest.
-[] Being able to see the real red flags: see what questions are the most influential of the risk indicator.
-[] Create records for each child, so you don't have to fill in the form again when you want to look back at it later.
-[] When you have created a record, you can also make a plan & give it a time limit.
-[] Use local storage to save the answers.
+- [x] Render forms through JSON
+- [x] Make the forms dynamic so that no matter the names of the form, it would always render perfectly.
+- [x] Render the risk indication percentage, and show what category weighs the heaviest.
+- [ ] Being able to see the real red flags: see what questions are the most influential of the risk indicator.
+- [ ] Create records for each child, so you don't have to fill in the form again when you want to look back at it later.
+- [ ] When you have created a record, you can also make a plan & give it a time limit.
+- [ ] Use local storage to save the answers.
 
 ## Making of
 I made this app as a school project for the Amsterdam University of Applied Sciences in collaboration with Garage2020. The goal for this app was to create an app that can aid caregivers in making decisions concerning children that struggle, mainly because of the environment they grow up in.
