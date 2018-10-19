@@ -1,5 +1,6 @@
 .formContainer {
-    margin: 25px;
+    width: 50%;
+    display: inline-block;
 }
 
 form {
@@ -8,6 +9,11 @@ form {
     -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
     border-radius: 10px;
+    margin-top: 50px;
+}
+
+form:first-of-type {
+    margin: 0;
 }
 
     form fieldset {

@@ -142,35 +142,161 @@
         "category": "Werk & Opleiding",
         "questions": [
             {
-                "name": "schoolKid",
-                "question": "Zit het kind nog op school?",
+                "name": "currentSchool",
+                "question": "Wat is het actuele onderwijs niveau",
                 "answer": [
                     {
-                        "option": "yes",
-                        "value": -0.234
+                        "option": "Basisonderwijs",
+                        "value": 0.25232
                     },
                     {
-                        "option": "no",
-                        "value": 1.23
+                        "option": "Vmbo b/k, mbo 1 en mbo 2",
+                        "value": 0.87842
+                    },
+                    {
+                        "option": "Vmbo g/t, mbo 3 en mbo 4",
+                        "value": 0.56882
+                    },
+                    {
+                        "option": "Vwo en Wo bachelor",
+                        "value": -0.83566
+                    },
+                    {
+                        "option": "Onbekend",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "changeOfSchool",
+                "question": "Heeft er een verandering in onderwijs niveau plaatsgevonden",
+                "answer": [
+                    {
+                        "option": "Afschalen",
+                        "value": 0.58732
+                    },
+                    {
+                        "option": "Onbekend",
+                        "value": -1.11682
+                    }
+                ]
+            },
+            {
+                "name": "schoolFather",
+                "question": "Wat is het hoogst behaalde diploma vader",
+                "answer": [
+                    {
+                        "option": "Vmbo b/k, mbo 1 en mbo 2",
+                        "value": -0.21630
+                    },
+                    {
+                        "option": "Vmbo g/t, mbo 2 en mbo 3",
+                        "value": 0.67119
+                    },
+                    {
+                        "option": "Vwo, Wo bachelor en Wo master",
+                        "value": -12.08995
+                    },
+                    {
+                        "option": "Onderwijs onbekend",
+                        "value": 0.88464
+                    }
+                ]
+            },
+            {
+                "name": "schoolMother",
+                "question": "Wat is het hoogst behaalde diploma moeder",
+                "answer": [
+                    {
+                        "option": "Vmbo b/k, mbo 1 en mbo 2",
+                        "value": 0.15936
+                    },
+                    {
+                        "option": "Vmbo g/t, mbo 2 en mbo 3",
+                        "value": 0.03334
+                    },
+                    {
+                        "option": "Vwo, Wo bachelor en Wo master",
+                        "value": -13.03162
+                    },
+                    {
+                        "option": "Onderwijs onbekend",
+                        "value": 0.03655
                     }
                 ]
             }
         ]
     },
     {
-        "category": "test",
+        "category": "Thuis situatie",
         "questions": [
             {
-                "name": "testQuestion",
-                "question": "DIt is een testvraag",
+                "name": "typeHuishouden",
+                "question": "Het type huishouden",
                 "answer": [
                     {
-                        "option": "test",
-                        "value": 0.23
+                        "option": "Eenouderhuishouden",
+                        "value": 0.49608
                     },
                     {
-                        "option": "no",
-                        "value": -0.23
+                        "option": "Eenpersoonshuishouden",
+                        "value": 1.71859
+                    },
+                    {
+                        "option": "Gehuwd paar zonder kinderen",
+                        "value": 1.06108
+                    },
+                    {
+                        "option": "Institutioneel huishouden",
+                        "value": 1.92321
+                    },
+                    {
+                        "option": "Niet-gehuwd paar met kinderen",
+                        "value": 0.32694
+                    },
+                    {
+                        "option": "Niet-gehuwd paar zonder kinderen",
+                        "value": -14.15530
+                    },
+                    {
+                        "option": "Onbekend huishouden",
+                        "value": -13.81002
+                    },
+                    {
+                        "option": "Overig huishouden",
+                        "value": 0.91365
+                    }
+                ]
+            },
+            {
+                "name": "divorce",
+                "question": "Zijn de ouders gescheiden?",
+                "answer": [
+                    {
+                        "option": "Ja",
+                        "value": 0.27683
+                    },
+                    {
+                        "option": "Nee",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "name": "houseType",
+                "question": "Soort woning",
+                "answer": [
+                    {
+                        "option": "Huurwoning met huurtoeslag",
+                        "value": 0.38401
+                    },
+                    {
+                        "option": "Huurwoning zonder huurtoeslag",
+                        "value": 0.40420
+                    },
+                    {
+                        "option": "Onbekend",
+                        "value": 2.40126
                     }
                 ]
             }

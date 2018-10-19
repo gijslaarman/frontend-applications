@@ -49,7 +49,7 @@ class Form extends Component {
         this.updateProps(this.state);
     }
 
-    createForms() {
+    render() {
         let forms = [];
 
         // Loop through the categories
@@ -117,13 +117,9 @@ class Form extends Component {
 
         } )
 
-        return forms;
-    }
-
-    render() {
         return (
             <div class={style.formContainer}>
-                {this.createForms()}
+                {forms}
             </div>
         )
     }
